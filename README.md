@@ -1,6 +1,10 @@
 
 # Duplicate file remover
 
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![GitHub commits](https://badgen.net/github/commits/Naereen/Strapdown.js)](https://GitHub.com/Naereen/StrapDown.js/commit/)
+
+
 Project by [@ahlawat-manisha](https://github.com/ahlawat-manisha) and [@Niraj-kumbhar](https://github.com/Niraj-kumbhar)
 
 Python script to remove duplicate file from specific directory.
