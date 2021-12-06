@@ -1,7 +1,7 @@
 
 # Duplicate file remover
 
-Project by @ahlawat-manisha and @Niraj-kumbhar
+Project by [@ahlawat-manisha](https://github.com/ahlawat-manisha) and [@Niraj-kumbhar](https://github.com/Niraj-kumbhar)
 
 Python script to remove duplicate file from specific directory.
 
