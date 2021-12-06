@@ -5,13 +5,23 @@ from posixpath import join
 import sys
 
 def checkPath(upath):
-    """ this function checks if path given by user exists or not
+    """ 
+    check path and set path
+
+    this function checks if path given by user exists or not
+    and if user doesn't provided anything current working directory path will get selected 
     """
+    if upath == '':   
+                           
+        upath = os.getcwd()
+        print('As no path given, selected currect directory for scanning\n')
+
     if not os.path.exists(upath):
         print('\n****Path entered does not exists!!!!!****')
         exit()
-    else:
-        return  upath
+
+    return upath
+    
     
 def readdata(file):
     """
@@ -46,17 +56,16 @@ def check_Duplicate():
         #print(hashed.hexdigest())
         if hashed.hexdigest() in unique:
             flist.append(fname)
-            #os.remove(file)
+            print('{} .....found!!'.format(fname))
+            os.remove(file)
         else:
             unique.append(hashed.hexdigest())
     return flist
 
 
-print(os.getcwd)
 u_path = checkPath(input("Enter path: ")) #take folder path from user
-print(str(os.getcwd))
 files = [x for x in os.listdir(u_path) if isfile(join(u_path,x))] #we will store all files present in folder in list
+print('Scanning started......\n')
 duplicate = check_Duplicate()
 
-print("\n####################### --Scan Completed\n{} Duplicate files Removed!!".format(len(duplicate)))
-print('\n'.join(duplicate))
+print("\nScan Completed\n{} Duplicate files Removed!!".format(len(duplicate)))
